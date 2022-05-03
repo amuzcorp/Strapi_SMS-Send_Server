@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "request_deposits",
+  "info": {
+    "singularName": "request-deposit",
+    "pluralName": "request-deposits",
+    "displayName": "RequestDeposit",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "username": {
+      "type": "string"
+    },
+    "userEmail": {
+      "type": "email"
+    },
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "string"
+    },
+    "responseAt": {
+      "type": "datetime"
+    },
+    "requestPass": {
+      "type": "boolean"
+    },
+    "requestMoney": {
+      "type": "biginteger"
+    },
+    "userId": {
+      "type": "string"
+    }
+  }
+}

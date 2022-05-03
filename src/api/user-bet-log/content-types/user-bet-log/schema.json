@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_bet_logs",
+  "info": {
+    "singularName": "user-bet-log",
+    "pluralName": "user-bet-logs",
+    "displayName": "UserBetLog",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "gamename": {
+      "type": "string"
+    },
+    "Username": {
+      "type": "string"
+    },
+    "betDate": {
+      "type": "datetime"
+    },
+    "result": {
+      "type": "boolean"
+    },
+    "hasMoneied": {
+      "type": "biginteger"
+    },
+    "getMoney": {
+      "type": "biginteger"
+    }
+  }
+}

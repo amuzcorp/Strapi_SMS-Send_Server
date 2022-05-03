@@ -1,0 +1,123 @@
+{
+  "kind": "collectionType",
+  "collectionName": "documents",
+  "info": {
+    "singularName": "document",
+    "pluralName": "documents",
+    "displayName": "Document",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "document_id": {
+      "type": "string",
+      "required": true
+    },
+    "parent_id": {
+      "type": "string",
+      "required": true
+    },
+    "instance_id": {
+      "type": "string",
+      "required": true
+    },
+    "type": {
+      "type": "string",
+      "required": true
+    },
+    "user_type": {
+      "type": "string",
+      "required": true,
+      "default": "normal"
+    },
+    "user_id": {
+      "type": "string",
+      "required": true
+    },
+    "writer": {
+      "type": "text",
+      "required": true
+    },
+    "email": {
+      "type": "string"
+    },
+    "certify_key": {
+      "type": "string",
+      "required": true
+    },
+    "read_count": {
+      "type": "integer",
+      "default": 0,
+      "required": true
+    },
+    "assent_count": {
+      "type": "integer",
+      "default": 0,
+      "required": true
+    },
+    "dissent_count": {
+      "type": "integer",
+      "default": 0,
+      "required": true
+    },
+    "approved": {
+      "type": "integer",
+      "default": 30,
+      "required": true
+    },
+    "published": {
+      "type": "integer",
+      "required": true,
+      "default": 30
+    },
+    "status": {
+      "type": "integer",
+      "default": 30,
+      "required": true
+    },
+    "display": {
+      "type": "integer",
+      "required": true,
+      "default": 20
+    },
+    "format": {
+      "default": 10,
+      "required": true,
+      "type": "integer"
+    },
+    "locale": {
+      "type": "string"
+    },
+    "title": {
+      "type": "text"
+    },
+    "content": {
+      "type": "text"
+    },
+    "pure_content": {
+      "type": "string"
+    },
+    "head": {
+      "type": "string"
+    },
+    "reply": {
+      "type": "string"
+    },
+    "ipaddress": {
+      "type": "string"
+    },
+    "site_key": {
+      "type": "string"
+    },
+    "comment_count": {
+      "type": "integer",
+      "required": true
+    },
+    "deletedAt": {
+      "type": "datetime"
+    }
+  }
+}
