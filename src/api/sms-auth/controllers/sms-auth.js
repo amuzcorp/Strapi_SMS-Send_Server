@@ -16,7 +16,7 @@ module.exports = {
       // 코드 생성
       const code = module.exports.create4DigitCode();
       // // 레디스에 저장
-      // await module.exports.saveAuthCode('key', code);
+      await module.exports.saveAuthCode(user.username, code);
       // // 문자 발송 함수 재활용
       // await sendMessageService(key, code);
       console.log(`문자 발송 완료!`,code);
@@ -33,7 +33,14 @@ module.exports = {
   
   // // redis에 key-value 형태로 저장
   saveAuthCode: async (key, code) => {
-    await client.set(key, code, { EX: 180});
+    const user = await strapi.db.query('api::user.user-permission').update({
+      where: {
+        username: key
+      },
+      data: {
+        auth_key: code
+      }
+    });
   },
   
   // // 코드 일치 여부 확인

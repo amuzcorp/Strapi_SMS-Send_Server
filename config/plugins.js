@@ -40,7 +40,7 @@ module.exports = {
               // strapi.$io.emit('getChat', "create", query);
             } catch(err) {
               console.log(err);
-            }
+            } 
           },
         },
       ]

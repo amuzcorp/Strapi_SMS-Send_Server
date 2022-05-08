@@ -11,8 +11,9 @@ module.exports = createCoreController('api::post.post', ({ strapi }) =>  ({
         return { data, meta };
     },
     async create(ctx) {
-        const response = await super.create(ctx);
         console.log('유저', ctx.state.user.id);
+        const response = await super.create(ctx);
+        
 
         
         return response;

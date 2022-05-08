@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkfrontend"]=self["webpackChunkfrontend"]||[]).push([[473],{473:function(n,r,e){e.r(r),e.d(r,{default:function(){return d}});var t=e(6252);function u(n,r,e,u,f,c){return(0,t.wg)(),(0,t.iD)("div",null,"베팅 기록")}var f={},c=e(3744);const a=(0,c.Z)(f,[["render",u]]);var d=a}}]);
+//# sourceMappingURL=473.381d13bc.js.map
