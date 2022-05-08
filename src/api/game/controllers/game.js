@@ -57,6 +57,9 @@ module.exports = {
           })
           ctx.body = '손실';
         }
+
+        // bet log
+        
       }
     } catch (err) {
         console.log(err);
