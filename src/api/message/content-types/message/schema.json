@@ -4,7 +4,8 @@
   "info": {
     "singularName": "message",
     "pluralName": "messages",
-    "displayName": " Message"
+    "displayName": " Message",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -13,6 +14,23 @@
   "attributes": {
     "content": {
       "type": "string"
+    },
+    "sendCount": {
+      "type": "string"
+    },
+    "sendBoolean": {
+      "type": "boolean"
+    },
+    "futureSendDate": {
+      "type": "datetime"
+    },
+    "toNumber": {
+      "type": "string",
+      "required": true
+    },
+    "userId": {
+      "type": "string",
+      "required": true
     }
   }
 }

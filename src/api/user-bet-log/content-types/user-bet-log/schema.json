@@ -15,7 +15,7 @@
     "gamename": {
       "type": "string"
     },
-    "Username": {
+    "userId": {
       "type": "string"
     },
     "betDate": {

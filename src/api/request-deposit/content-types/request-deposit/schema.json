@@ -21,20 +21,18 @@
     "title": {
       "type": "string"
     },
-    "content": {
-      "type": "string"
-    },
     "responseAt": {
       "type": "datetime"
-    },
-    "requestPass": {
-      "type": "boolean"
     },
     "requestMoney": {
       "type": "biginteger"
     },
     "userId": {
       "type": "string"
+    },
+    "requestPass": {
+      "type": "string",
+      "default": "대기"
     }
   }
 }

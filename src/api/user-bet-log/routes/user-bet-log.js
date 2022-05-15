@@ -6,4 +6,18 @@
 
 const { createCoreRouter } = require('@strapi/strapi').factories;
 
-module.exports = createCoreRouter('api::user-bet-log.user-bet-log');
+module.exports = {
+    routes: [
+        {
+          method: 'GET',
+          path: '/user-bet-logs',
+          handler: 'user-bet-log.findByUserId',
+        },
+        {
+            method: 'GET',
+            path: '/user-bet-log',
+            handler: 'user-bet-log.findAll',
+        },
+    ],
+};
+

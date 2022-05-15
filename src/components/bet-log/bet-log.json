@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_bet_log_bet_logs",
+  "info": {
+    "displayName": "bet-log",
+    "icon": "cat",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "gameName": {
+      "type": "string"
+    },
+    "result": {
+      "type": "boolean"
+    },
+    "hasMoneied": {
+      "type": "biginteger"
+    },
+    "betValue": {
+      "type": "biginteger"
+    }
+  }
+}

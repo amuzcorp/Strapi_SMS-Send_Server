@@ -46,11 +46,6 @@
       "configurable": false,
       "private": true
     },
-    "confirmed": {
-      "type": "boolean",
-      "default": false,
-      "configurable": true
-    },
     "blocked": {
       "type": "boolean",
       "default": false,
@@ -63,10 +58,24 @@
       "inversedBy": "users",
       "configurable": false
     },
+    "confirmed": {
+      "type": "boolean",
+      "default": false
+    },
     "hasMoney": {
       "type": "biginteger",
       "default": "0",
       "required": true
+    },
+    "requestMoneyValue": {
+      "type": "biginteger",
+      "default": "10000"
+    },
+    "betLog": {
+      "displayName": "bet-log",
+      "type": "component",
+      "repeatable": true,
+      "component": "bet-log.bet-log"
     }
   }
 }

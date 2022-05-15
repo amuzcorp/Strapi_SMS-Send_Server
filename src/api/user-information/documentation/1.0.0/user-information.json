@@ -53,9 +53,6 @@
                                           "confirmationToken": {
                                             "type": "string"
                                           },
-                                          "confirmed": {
-                                            "type": "boolean"
-                                          },
                                           "blocked": {
                                             "type": "boolean"
                                           },
@@ -482,10 +479,45 @@
                                               }
                                             }
                                           },
+                                          "confirmed": {
+                                            "type": "boolean"
+                                          },
                                           "hasMoney": {
                                             "type": "string",
                                             "pattern": "^\\d*$",
                                             "example": "123456789"
+                                          },
+                                          "requestMoneyValue": {
+                                            "type": "string",
+                                            "pattern": "^\\d*$",
+                                            "example": "123456789"
+                                          },
+                                          "betLog": {
+                                            "type": "array",
+                                            "items": {
+                                              "type": "object",
+                                              "properties": {
+                                                "id": {
+                                                  "type": "string"
+                                                },
+                                                "gameName": {
+                                                  "type": "string"
+                                                },
+                                                "result": {
+                                                  "type": "boolean"
+                                                },
+                                                "hasMoneied": {
+                                                  "type": "string",
+                                                  "pattern": "^\\d*$",
+                                                  "example": "123456789"
+                                                },
+                                                "betValue": {
+                                                  "type": "string",
+                                                  "pattern": "^\\d*$",
+                                                  "example": "123456789"
+                                                }
+                                              }
+                                            }
                                           },
                                           "createdAt": {
                                             "type": "string",
@@ -897,9 +929,6 @@
                                         "confirmationToken": {
                                           "type": "string"
                                         },
-                                        "confirmed": {
-                                          "type": "boolean"
-                                        },
                                         "blocked": {
                                           "type": "boolean"
                                         },
@@ -1326,10 +1355,45 @@
                                             }
                                           }
                                         },
+                                        "confirmed": {
+                                          "type": "boolean"
+                                        },
                                         "hasMoney": {
                                           "type": "string",
                                           "pattern": "^\\d*$",
                                           "example": "123456789"
+                                        },
+                                        "requestMoneyValue": {
+                                          "type": "string",
+                                          "pattern": "^\\d*$",
+                                          "example": "123456789"
+                                        },
+                                        "betLog": {
+                                          "type": "array",
+                                          "items": {
+                                            "type": "object",
+                                            "properties": {
+                                              "id": {
+                                                "type": "string"
+                                              },
+                                              "gameName": {
+                                                "type": "string"
+                                              },
+                                              "result": {
+                                                "type": "boolean"
+                                              },
+                                              "hasMoneied": {
+                                                "type": "string",
+                                                "pattern": "^\\d*$",
+                                                "example": "123456789"
+                                              },
+                                              "betValue": {
+                                                "type": "string",
+                                                "pattern": "^\\d*$",
+                                                "example": "123456789"
+                                              }
+                                            }
+                                          }
                                         },
                                         "createdAt": {
                                           "type": "string",
@@ -1662,9 +1726,6 @@
                                         "confirmationToken": {
                                           "type": "string"
                                         },
-                                        "confirmed": {
-                                          "type": "boolean"
-                                        },
                                         "blocked": {
                                           "type": "boolean"
                                         },
@@ -2091,10 +2152,45 @@
                                             }
                                           }
                                         },
+                                        "confirmed": {
+                                          "type": "boolean"
+                                        },
                                         "hasMoney": {
                                           "type": "string",
                                           "pattern": "^\\d*$",
                                           "example": "123456789"
+                                        },
+                                        "requestMoneyValue": {
+                                          "type": "string",
+                                          "pattern": "^\\d*$",
+                                          "example": "123456789"
+                                        },
+                                        "betLog": {
+                                          "type": "array",
+                                          "items": {
+                                            "type": "object",
+                                            "properties": {
+                                              "id": {
+                                                "type": "string"
+                                              },
+                                              "gameName": {
+                                                "type": "string"
+                                              },
+                                              "result": {
+                                                "type": "boolean"
+                                              },
+                                              "hasMoneied": {
+                                                "type": "string",
+                                                "pattern": "^\\d*$",
+                                                "example": "123456789"
+                                              },
+                                              "betValue": {
+                                                "type": "string",
+                                                "pattern": "^\\d*$",
+                                                "example": "123456789"
+                                              }
+                                            }
+                                          }
                                         },
                                         "createdAt": {
                                           "type": "string",
@@ -2415,9 +2511,6 @@
                                         "confirmationToken": {
                                           "type": "string"
                                         },
-                                        "confirmed": {
-                                          "type": "boolean"
-                                        },
                                         "blocked": {
                                           "type": "boolean"
                                         },
@@ -2844,10 +2937,45 @@
                                             }
                                           }
                                         },
+                                        "confirmed": {
+                                          "type": "boolean"
+                                        },
                                         "hasMoney": {
                                           "type": "string",
                                           "pattern": "^\\d*$",
                                           "example": "123456789"
+                                        },
+                                        "requestMoneyValue": {
+                                          "type": "string",
+                                          "pattern": "^\\d*$",
+                                          "example": "123456789"
+                                        },
+                                        "betLog": {
+                                          "type": "array",
+                                          "items": {
+                                            "type": "object",
+                                            "properties": {
+                                              "id": {
+                                                "type": "string"
+                                              },
+                                              "gameName": {
+                                                "type": "string"
+                                              },
+                                              "result": {
+                                                "type": "boolean"
+                                              },
+                                              "hasMoneied": {
+                                                "type": "string",
+                                                "pattern": "^\\d*$",
+                                                "example": "123456789"
+                                              },
+                                              "betValue": {
+                                                "type": "string",
+                                                "pattern": "^\\d*$",
+                                                "example": "123456789"
+                                              }
+                                            }
+                                          }
                                         },
                                         "createdAt": {
                                           "type": "string",

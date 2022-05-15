@@ -13,16 +13,13 @@ module.exports = createCoreController('api::post.post', ({ strapi }) =>  ({
     async create(ctx) {
         console.log('유저', ctx.state.user.id);
         const response = await super.create(ctx);
-        
-
-        
         return response;
     },
     async index(ctx, next) {
         const entries = await strapi.db.query('api::post.post').findMany({
             select: ['userid'],
             where: {
-                userid: 4
+                userid: ctx.state.user.id
             },
         })
         console.log('entries',entries)

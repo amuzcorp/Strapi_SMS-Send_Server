@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "phone_books",
+  "info": {
+    "singularName": "phone-book",
+    "pluralName": "phone-books",
+    "displayName": " phoneBook"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "phoneInformation": {
+      "type": "json"
+    },
+    "userId": {
+      "type": "biginteger"
+    }
+  }
+}

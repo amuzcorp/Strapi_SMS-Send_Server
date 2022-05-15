@@ -7,7 +7,10 @@
 module.exports = {
   userList: async(ctx, next) => {
     const entries = await strapi.db.query('plugin::users-permissions.user').findMany({
-        select: ['id', 'username', 'hasMoney', 'createdAt'],
+      select: ['id', 'username', 'hasMoney', 'createdAt'],
+      populate: {
+        betLog: true,
+      },
     })
     // console.log(ctx.request.header)
     // console.log('entries',entries)
@@ -22,6 +25,7 @@ module.exports = {
   },
   holzzakBetting: async(ctx, next) => {
     try {
+      
       let answer = Math.floor(Math.random() * 2 + 1);
       // console.log(ctx.request.body.data.betValue, '원 베팅');
       // console.log(ctx.request.body.data.bettingValue == 1 ? "홀" : "짝");
@@ -34,6 +38,8 @@ module.exports = {
         ctx.body = "금액 부족"
       } 
       else {
+        let hasMoney = ctx.state.user.hasMoney;
+        let gameResult;
         if(answer === ctx.request.body.data.bettingValue) {
           await strapi.db.query('plugin::users-permissions.user').update({
             select: ['hasMoney'],
@@ -44,7 +50,7 @@ module.exports = {
               hasMoney: parseInt(ctx.state.user.hasMoney) + parseInt(ctx.request.body.data.betValue)
             }
           })
-          ctx.body = '이득';
+          ctx.body = gameResult = '이득';
         } else {
           await strapi.db.query('plugin::users-permissions.user').update({
             select: ['hasMoney'],
@@ -55,12 +61,28 @@ module.exports = {
               hasMoney: parseInt(ctx.state.user.hasMoney) - parseInt(ctx.request.body.data.betValue)
             }
           })
-          ctx.body = '손실';
+          ctx.body = gameResult = '손실';
+          
         }
 
         // bet log
-        
+        // const res = await strapi.db.query('plugin::users-permissions.user').update({
+        //   populate: {
+            
+        //   },
+        //   data: {
+        //     gameName: 'asd',
+        //     result: null, 
+        //     hasMoneied: '12323',
+        //     betValue: '123'
+        //   },
+        //   where: {
+        //     id: ctx.state.user.id
+        //   }
+        // })
+        console.log(res)
       }
+      
     } catch (err) {
         console.log(err);
         ctx.body = err; 

@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/messages": {
+    "/phone-books": {
       "get": {
         "responses": {
           "200": {
@@ -20,24 +20,11 @@
                           "attributes": {
                             "type": "object",
                             "properties": {
-                              "content": {
-                                "type": "string"
-                              },
-                              "sendCount": {
-                                "type": "string"
-                              },
-                              "sendBoolean": {
-                                "type": "boolean"
-                              },
-                              "futureSendDate": {
-                                "type": "string",
-                                "format": "date-time"
-                              },
-                              "toNumber": {
-                                "type": "string"
-                              },
+                              "phoneInformation": {},
                               "userId": {
-                                "type": "string"
+                                "type": "string",
+                                "pattern": "^\\d*$",
+                                "example": "123456789"
                               },
                               "createdAt": {
                                 "type": "string",
@@ -516,7 +503,7 @@
           }
         },
         "tags": [
-          "Message"
+          "Phone-book"
         ],
         "parameters": [
           {
@@ -600,7 +587,7 @@
             }
           }
         ],
-        "operationId": "get/messages"
+        "operationId": "get/phone-books"
       },
       "post": {
         "responses": {
@@ -619,24 +606,11 @@
                         "attributes": {
                           "type": "object",
                           "properties": {
-                            "content": {
-                              "type": "string"
-                            },
-                            "sendCount": {
-                              "type": "string"
-                            },
-                            "sendBoolean": {
-                              "type": "boolean"
-                            },
-                            "futureSendDate": {
-                              "type": "string",
-                              "format": "date-time"
-                            },
-                            "toNumber": {
-                              "type": "string"
-                            },
+                            "phoneInformation": {},
                             "userId": {
-                              "type": "string"
+                              "type": "string",
+                              "pattern": "^\\d*$",
+                              "example": "123456789"
                             },
                             "createdAt": {
                               "type": "string",
@@ -1094,10 +1068,10 @@
           }
         },
         "tags": [
-          "Message"
+          "Phone-book"
         ],
         "parameters": [],
-        "operationId": "post/messages",
+        "operationId": "post/phone-books",
         "requestBody": {
           "required": true,
           "content": {
@@ -1107,11 +1081,45 @@
                   "data": {
                     "type": "object",
                     "properties": {
-                      "toNumber": {
-                        "type": "string"
-                      },
+                      "phoneInformation": {},
                       "userId": {
-                        "type": "string"
+                        "type": "string",
+                        "pattern": "^\\d*$",
+                        "example": "123456789"
+                      },
+                      "createdAt": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "updatedAt": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "publishedAt": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "createdBy": {
+                        "oneOf": [
+                          {
+                            "type": "integer"
+                          },
+                          {
+                            "type": "string"
+                          }
+                        ],
+                        "example": "string or id"
+                      },
+                      "updatedBy": {
+                        "oneOf": [
+                          {
+                            "type": "integer"
+                          },
+                          {
+                            "type": "string"
+                          }
+                        ],
+                        "example": "string or id"
                       }
                     }
                   }
@@ -1122,7 +1130,7 @@
         }
       }
     },
-    "/messages/{id}": {
+    "/phone-books/{id}": {
       "get": {
         "responses": {
           "200": {
@@ -1140,24 +1148,11 @@
                         "attributes": {
                           "type": "object",
                           "properties": {
-                            "content": {
-                              "type": "string"
-                            },
-                            "sendCount": {
-                              "type": "string"
-                            },
-                            "sendBoolean": {
-                              "type": "boolean"
-                            },
-                            "futureSendDate": {
-                              "type": "string",
-                              "format": "date-time"
-                            },
-                            "toNumber": {
-                              "type": "string"
-                            },
+                            "phoneInformation": {},
                             "userId": {
-                              "type": "string"
+                              "type": "string",
+                              "pattern": "^\\d*$",
+                              "example": "123456789"
                             },
                             "createdAt": {
                               "type": "string",
@@ -1615,7 +1610,7 @@
           }
         },
         "tags": [
-          "Message"
+          "Phone-book"
         ],
         "parameters": [
           {
@@ -1629,7 +1624,7 @@
             }
           }
         ],
-        "operationId": "get/messages/{id}"
+        "operationId": "get/phone-books/{id}"
       },
       "put": {
         "responses": {
@@ -1648,24 +1643,11 @@
                         "attributes": {
                           "type": "object",
                           "properties": {
-                            "content": {
-                              "type": "string"
-                            },
-                            "sendCount": {
-                              "type": "string"
-                            },
-                            "sendBoolean": {
-                              "type": "boolean"
-                            },
-                            "futureSendDate": {
-                              "type": "string",
-                              "format": "date-time"
-                            },
-                            "toNumber": {
-                              "type": "string"
-                            },
+                            "phoneInformation": {},
                             "userId": {
-                              "type": "string"
+                              "type": "string",
+                              "pattern": "^\\d*$",
+                              "example": "123456789"
                             },
                             "createdAt": {
                               "type": "string",
@@ -2123,7 +2105,7 @@
           }
         },
         "tags": [
-          "Message"
+          "Phone-book"
         ],
         "parameters": [
           {
@@ -2137,7 +2119,7 @@
             }
           }
         ],
-        "operationId": "put/messages/{id}",
+        "operationId": "put/phone-books/{id}",
         "requestBody": {
           "required": true,
           "content": {
@@ -2147,24 +2129,11 @@
                   "data": {
                     "type": "object",
                     "properties": {
-                      "content": {
-                        "type": "string"
-                      },
-                      "sendCount": {
-                        "type": "string"
-                      },
-                      "sendBoolean": {
-                        "type": "boolean"
-                      },
-                      "futureSendDate": {
-                        "type": "string",
-                        "format": "date-time"
-                      },
-                      "toNumber": {
-                        "type": "string"
-                      },
+                      "phoneInformation": {},
                       "userId": {
-                        "type": "string"
+                        "type": "string",
+                        "pattern": "^\\d*$",
+                        "example": "123456789"
                       },
                       "createdAt": {
                         "type": "string",
@@ -2368,7 +2337,7 @@
           }
         },
         "tags": [
-          "Message"
+          "Phone-book"
         ],
         "parameters": [
           {
@@ -2382,7 +2351,7 @@
             }
           }
         ],
-        "operationId": "delete/messages/{id}"
+        "operationId": "delete/phone-books/{id}"
       }
     }
   }

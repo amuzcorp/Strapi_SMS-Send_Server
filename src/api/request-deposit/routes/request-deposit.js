@@ -1,9 +1,16 @@
 'use strict';
 
-/**
- * request-deposit router.
- */
-
-const { createCoreRouter } = require('@strapi/strapi').factories;
-
-module.exports = createCoreRouter('api::request-deposit.request-deposit');
+module.exports = {
+    routes: [
+        {
+          method: 'GET',
+          path: '/request-deposits',
+          handler: 'request-deposit.findByUserId',
+        },
+        {
+            method: 'POST',
+            path: '/request-deposits',
+            handler: 'request-deposit.create',
+        },
+    ],
+};

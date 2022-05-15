@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "message_components",
+  "info": {
+    "singularName": "message-component",
+    "pluralName": "message-components",
+    "displayName": "MessageComponent"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "setCount": {
+      "type": "biginteger"
+    },
+    "toList": {
+      "type": "json"
+    },
+    "setDate": {
+      "type": "datetime"
+    },
+    "messageContent": {
+      "type": "json"
+    },
+    "media": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "userId": {
+      "type": "biginteger"
+    }
+  }
+}
