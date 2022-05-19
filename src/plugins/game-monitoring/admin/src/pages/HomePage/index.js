@@ -38,3 +38,4 @@ const HomePage = () => {
 };
 
 export default memo(HomePage);
+

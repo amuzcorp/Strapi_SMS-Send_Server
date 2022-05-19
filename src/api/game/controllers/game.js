@@ -18,12 +18,39 @@ module.exports = {
 },
   exampleAction: async (ctx, next) => {
     try {
-      ctx.body = 'ok';
+      const express = require('express');
+    const app = express();
+
+    const port = 1338;
+
+    app.get("/sse", (req, res) => {
+      res.setHeader("Content-Type", 'text/event-stream');
+      res.setHeader("Access-Control-Allow-Origin", '*');
+
+      const intervalId = setInterval(() => {
+        const date = new Date().toDateString();
+        res.write(`data: ${date}\n\n`)
+      }, 1000)
+
+      res.on("close", () => {
+        strapi.log.info("Close");
+        clearInterval(intervalId);
+        res.end();
+      })
+      
+    })
+
+    app.listen(port, () => {
+      strapi.log.info("Server Run", port)
+    })
+    
+    strapi.log.info("strapi")
     } catch (err) {
       ctx.body = err;
     }
   },
   holzzakBetting: async(ctx, next) => {
+    const axios = require("axios");
     try {
       
       let answer = Math.floor(Math.random() * 2 + 1);

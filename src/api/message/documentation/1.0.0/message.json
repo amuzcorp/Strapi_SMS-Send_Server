@@ -20,23 +20,10 @@
                           "attributes": {
                             "type": "object",
                             "properties": {
-                              "content": {
-                                "type": "string"
-                              },
-                              "sendCount": {
-                                "type": "string"
-                              },
-                              "sendBoolean": {
-                                "type": "boolean"
-                              },
-                              "futureSendDate": {
-                                "type": "string",
-                                "format": "date-time"
-                              },
-                              "toNumber": {
-                                "type": "string"
-                              },
                               "userId": {
+                                "type": "string"
+                              },
+                              "msg": {
                                 "type": "string"
                               },
                               "createdAt": {
@@ -619,23 +606,10 @@
                         "attributes": {
                           "type": "object",
                           "properties": {
-                            "content": {
-                              "type": "string"
-                            },
-                            "sendCount": {
-                              "type": "string"
-                            },
-                            "sendBoolean": {
-                              "type": "boolean"
-                            },
-                            "futureSendDate": {
-                              "type": "string",
-                              "format": "date-time"
-                            },
-                            "toNumber": {
-                              "type": "string"
-                            },
                             "userId": {
+                              "type": "string"
+                            },
+                            "msg": {
                               "type": "string"
                             },
                             "createdAt": {
@@ -1107,9 +1081,6 @@
                   "data": {
                     "type": "object",
                     "properties": {
-                      "toNumber": {
-                        "type": "string"
-                      },
                       "userId": {
                         "type": "string"
                       }
@@ -1140,23 +1111,10 @@
                         "attributes": {
                           "type": "object",
                           "properties": {
-                            "content": {
-                              "type": "string"
-                            },
-                            "sendCount": {
-                              "type": "string"
-                            },
-                            "sendBoolean": {
-                              "type": "boolean"
-                            },
-                            "futureSendDate": {
-                              "type": "string",
-                              "format": "date-time"
-                            },
-                            "toNumber": {
-                              "type": "string"
-                            },
                             "userId": {
+                              "type": "string"
+                            },
+                            "msg": {
                               "type": "string"
                             },
                             "createdAt": {
@@ -1648,23 +1606,10 @@
                         "attributes": {
                           "type": "object",
                           "properties": {
-                            "content": {
-                              "type": "string"
-                            },
-                            "sendCount": {
-                              "type": "string"
-                            },
-                            "sendBoolean": {
-                              "type": "boolean"
-                            },
-                            "futureSendDate": {
-                              "type": "string",
-                              "format": "date-time"
-                            },
-                            "toNumber": {
-                              "type": "string"
-                            },
                             "userId": {
+                              "type": "string"
+                            },
+                            "msg": {
                               "type": "string"
                             },
                             "createdAt": {
@@ -2147,23 +2092,10 @@
                   "data": {
                     "type": "object",
                     "properties": {
-                      "content": {
-                        "type": "string"
-                      },
-                      "sendCount": {
-                        "type": "string"
-                      },
-                      "sendBoolean": {
-                        "type": "boolean"
-                      },
-                      "futureSendDate": {
-                        "type": "string",
-                        "format": "date-time"
-                      },
-                      "toNumber": {
-                        "type": "string"
-                      },
                       "userId": {
+                        "type": "string"
+                      },
+                      "msg": {
                         "type": "string"
                       },
                       "createdAt": {

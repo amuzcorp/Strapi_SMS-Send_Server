@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "address_books",
+  "info": {
+    "singularName": "address-book",
+    "pluralName": "address-books",
+    "displayName": "addressBook"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "AddressInformation": {
+      "type": "json"
+    },
+    "userId": {
+      "type": "biginteger"
+    }
+  }
+}

@@ -1,5 +1,5 @@
 'use strict';
 
 module.exports = ({ strapi }) => {
-  // bootstrap phase
+    strapi.log.info("실행")
 };

@@ -7,11 +7,8 @@ module.exports = {
     resolve: './src/plugins/game-monitoring'
   },
   "io": {
-    "enabled": true,
+    "enabled": false,
     "config": {
-      "IOServerOptions" :{
-        "cors": { "origin": "http://localhost:8080", "methods": ["GET"] },
-      },
       "contentTypes": {
         "message": "*",
         "chat":["create"]
@@ -19,9 +16,15 @@ module.exports = {
       "events":[
         {
           "name": "connection",
-          "handler": ({ strapi }, socket) => {
-            strapi.log.info(`[io] new connection with id ${socket.id}`);
-            strapi.$io.emit("api::message.message.create", 'test');
+          "handler": async ({ strapi }, socket, ctx ) => {
+            try {
+              strapi.log.info(`[io] new connection with id ${socket.id}`);
+              // strapi.log.info(Object.keys(ctx));
+            // strapi.$io.emit("api::message.message.create",;
+            } catch (error) {
+              strapi.log.info(error);
+            }
+            
           },
         },
         {
@@ -32,14 +35,18 @@ module.exports = {
         },
         {
           "name": "chatSend", 
-          "handler": async ({ strapi }, socket) => {
+          "handler": async ({ strapi }, ctx) => {
             try {
-              strapi.log.info(JSON.stringify(socket));
+              // strapi.log.info('id')
+              strapi.log.info(ctx.msg);
               // let query = strapi.services.message.create(JSON.stringify(socket))
               
-              // strapi.$io.emit('getChat', "create", query);
+              // strapi.log.info('id', ctx.state.user.id);
+              const data = { data: {userId: 4, msg: ctx.msg} }
+              // strapi.log.info(await strapi.$io.emit("_getStrapiRooms"));
+              await strapi.$io.emit("api::message.message", data);
             } catch(err) {
-              console.log(err);
+              strapi.log.info(err);
             } 
           },
         },

@@ -6,7 +6,6 @@
 const { createCoreController } = require('@strapi/strapi').factories;
 module.exports = createCoreController('api::post.post', ({ strapi }) =>  ({
     async find(ctx) {
-        console.log(ctx)
         const { data, meta } = await super.find(ctx);
         return { data, meta };
     },
@@ -22,7 +21,6 @@ module.exports = createCoreController('api::post.post', ({ strapi }) =>  ({
                 userid: ctx.state.user.id
             },
         })
-        console.log('entries',entries)
         const response = await super.find(ctx);
         return response;
     }

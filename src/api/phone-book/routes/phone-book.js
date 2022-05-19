@@ -3,28 +3,30 @@
 /**
  * phone-book router.
  */
-
-const { createCoreRouter } = require('@strapi/strapi').factories;
-
-module.exports = createCoreRouter('api::phone-book.phone-book', {
+module.exports = {
     routes: [
         {
-            method: 'GET',
-            path: '/phone-books',
-            handler: 'phone-book.find',
+          method: 'GET',
+          path: '/phone-books',
+          handler: 'phone-book.find',
         },
-          {
-            method: 'POST',
-            path: '/phone-books',
-            handler: 'phone-book.create',
-          },
-          {
-            method: 'DELETE',
-            path: '/phone-books',
-            handler: 'phone-book.delete',
-            // config: {
-            //   policies: ['post']
-            // }
-          }
-        ]
-});
+        {
+          method: 'GET',
+          path: '/phone-books-id',
+          handler: 'phone-book.findManyById',
+        },
+        {
+          method: 'POST',
+          path: '/phone-books',
+          handler: 'phone-book.create',
+        },
+        {
+          method: 'DELETE',
+          path: '/phone-books',
+          handler: 'phone-book.delete',
+          // config: {
+          //   policies: ['post']
+          // }
+        }
+      ]
+};

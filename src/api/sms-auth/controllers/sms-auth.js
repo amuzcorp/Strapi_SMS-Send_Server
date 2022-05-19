@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * A set of functions called "actions" for `sms-auth`
+ * A set of functions called "actions" for "sms-auth`
  */
 const axios = require("axios");
 
@@ -110,5 +110,6 @@ module.exports = {
   //   const result = await compareAuthCode(phoneNum, code);
   //   return res.status(200).send(result);
   // }
+  
 };
 
